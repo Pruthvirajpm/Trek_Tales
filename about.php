@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Us - BookingBreeze</title>
+    <title>About Us - Trek Tales</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
@@ -29,7 +29,7 @@
 
     <div class="container mt-5">
         <h2>About Us</h2>
-        <p>Welcome to BookingBreeze, your ultimate destination for hassle-free and delightful hotel bookings! At BookingBreeze, we are dedicated to providing you with a seamless experience when it comes to planning and booking your dream vacation stays.</p>
+        <p>Welcome to Trek Tales, your ultimate destination for hassle-free and delightful hotel bookings! At Trek Tales, we are dedicated to providing you with a seamless experience when it comes to planning and booking your dream vacation stays.</p>
 
         <!-- Adding interactive features with icons -->
         <div class="row mt-4">
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <p class="mt-4">Thank you for choosing BookingBreeze as your travel companion. We're excited to help you embark on unforgettable journeys, one booking at a time.</p>
+        <p class="mt-4">Thank you for choosing Trek Tales as your travel companion. We're excited to help you embark on unforgettable journeys, one booking at a time.</p>
     </div>
 
     <?php include "footer.php"; ?>
