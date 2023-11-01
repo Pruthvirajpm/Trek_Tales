@@ -1,4 +1,3 @@
-
 <<?php
 // Start session
 session_start();
@@ -45,4 +44,3 @@ if (empty($username) || empty($password)) {
 $stmt->close();
 $conn->close();
 ?>
-
