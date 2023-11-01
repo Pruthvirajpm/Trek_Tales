@@ -1,8 +1,40 @@
-<!DOCTYPE html>
-<html>
+<?php
+session_start();
+require 'users.php';
 
-<head>
-    <!DOCTYPE html>
+// Connect to the MySQL database
+$host = 'localhost';
+$username = 'pm';
+$password = '123456';
+$database = 'trek_tales'; // Use the correct database name
+
+$conn = new mysqli($host, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Function to retrieve the list of hotels
+function getHotels($conn) {
+    $hotels = [];
+    $query = "SELECT * FROM hotels";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $hotels[] = $row;
+        }
+    }
+
+    return $hotels;
+}
+
+$hotels = getHotels($conn);
+
+?>
+
+
+<!DOCTYPE html>
     <html>
 
     <head>
@@ -22,6 +54,8 @@
     <?php include "navbar.php"; ?>
 
     <!--<a class="navbar-brand" href="#">Trek Tales</a>-->
+
+    
 
     <div class="container mt-5">
         <!-- Image Slider -->
@@ -59,6 +93,9 @@
         <div class="container mt-5">
             <h1>Welcome to Trek Tales</h1>
             <p>Your Ultimate Hotel and Vacation Booking Experience</p>
+
+
+            
 
             
             
@@ -112,7 +149,37 @@
                 }
             }
         }
+
+        // Read the hotel data from hotels.json
+// $hotelData = json_decode(file_get_contents('hotels.json'), true);
+
         ?>
+
+            
+<div class="container mt-5">
+    <h2>Featured Hotels</h2>
+    <div class="row">
+        <?php
+        if (!empty($hotels)) { // Replace $hotelData with $hotels
+            foreach ($hotels as $hotel) {
+                echo '<div class="col-md-4">';
+                echo '<div class="card hotel-card">';
+                echo '<img src="images/' . strtolower(str_replace(' ', '', $hotel['name'])) . '.jpg" class="card-img-top" alt="' . $hotel['name'] . '">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $hotel['name'] . '</h5>';
+                echo '<p class="card-text">' . $hotel['description'] . '</p>';
+                echo '<a href="booking.php?type=hotel&id=' . $hotel['id'] . '" class="btn btn-primary">Book Now</a>'; // Update the link to include the correct hotel ID
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        }
+        ?>
+    </div>
+</div>
+ <!--    above is the code for admin controlling adding hotels>
+
+
 
 
             <h2>Featured Hotels</h2>
