@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 $servername = "localhost";
 $username = "pm";
 $password = "123456";
-$dbname = "amdamariwad_bookingbreeze";
+$dbname = "trek_tales";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
