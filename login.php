@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - BookingBreeze</title>
+    <title>Login - Trek Tales</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <?php include "navbar_2.php"; ?>
+    <?php include "navbar.php"; ?>
 
     <div class="container mt-5">
         <h2>Login</h2>
