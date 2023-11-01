@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $message = $_POST["message"];
 
-    // Validate and sanitize user input
+Validate and sanitize user input
 
     $sql = "INSERT INTO contact_messages (message_id, name, email, phone, title, message) VALUES ('$msgid','$name', '$email', '$phone','$title','$message')";
 
